@@ -19,6 +19,7 @@ const Route = use('Route')
 // Route.on('/').render('welcome')
 //rota home
 Route.on('/').render('home')
+Route.on('/tasks').render('tasks')
 // // 1º forma de uma rota
 // Route.get('/test', () => 'hello world !!! nova stack ')
 // // 2º forma de uma rota retorna o id

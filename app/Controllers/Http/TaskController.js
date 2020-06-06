@@ -22,6 +22,9 @@ class TaskController {
     task.body =request.input('body')
 
     await task.save()
+
+    session.flash({ notification: 'Task added!' })
+
     return response.redirect('/tasks')
   }
 

@@ -24,6 +24,7 @@ Route.get('/tasks','TaskController.index')
 Route.on('/add').render('add')
 Route.post('/add','TaskController.store')
 Route.get('/tasks/:id','TaskController.detail')
+Route.get('/remove/:id','TaskController.remove')
 // // 1º forma de uma rota
 // Route.get('/test', () => 'hello world !!! nova stack ')
 // // 2º forma de uma rota retorna o id

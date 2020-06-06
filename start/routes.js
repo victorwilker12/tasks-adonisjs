@@ -19,9 +19,10 @@ const Route = use('Route')
 // Route.on('/').render('welcome')
 //rota home
 Route.on('/').render('home')
-Route.get('tasks','TaskController.index')
+Route.get('/tasks','TaskController.index')
 // Route.on('/tasks').render('tasks')
 Route.on('/add').render('add')
+Route.post('/add','TaskController.store')
 // // 1º forma de uma rota
 // Route.get('/test', () => 'hello world !!! nova stack ')
 // // 2º forma de uma rota retorna o id

@@ -6,6 +6,7 @@
 <h1 class='mb-3'>New Task</h1>
 
 <form action="{{ route('/add') }}" method="POST">
+  {{ csrfField()  }}
     <div class='mb-3'>
       <label for="">Title</label>
       <input type="text" class="form-control is-invalid"
@@ -21,7 +22,7 @@
     <div class='mb-3'>
       <label for="">Body</label>
 
-      <textarea name="Body"  class="form-control is-invalid"
+      <textarea name="body"  class="form-control is-invalid"
       placeholder="your body"
       ></textarea>
       <div class="invalid-feedback">

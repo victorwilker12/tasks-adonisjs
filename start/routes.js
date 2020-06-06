@@ -15,5 +15,17 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
-
-Route.on('/').render('welcome')
+// rota padrão
+// Route.on('/').render('welcome')
+//rota home
+Route.on('/').render('home')
+// 1º forma de uma rota
+Route.get('/test', () => 'hello world !!! nova stack ')
+// 2º forma de uma rota retorna o id
+Route.get('/test/:id',
+   function({params}) {
+        return `this is id ${params.id}`;
+    }
+)
+//chamar rota task
+Route.get('task','TaskController.index')

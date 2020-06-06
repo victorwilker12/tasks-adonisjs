@@ -9,8 +9,8 @@ class TaskController {
     ]
 
 
-    return view.render('task',{
-      title: 'Your Tasks',
+    return view.render('tasks',{
+      title: 'Lastest Tasks',
       tasks: tasks
     })
   }

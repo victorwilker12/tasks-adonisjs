@@ -1,12 +1,13 @@
 'use strict'
 
-class TaskController {
-  index({view}){
+//use model Task
+const Task = use('App/Models/Task')
 
-    const tasks = [
-      {title:'Task one', body: 'This is task one' },
-      {title:'Task two', body: 'This is task two' },
-    ]
+
+class TaskController {
+  async index({view}){
+
+    const tasks = await Task.all
 
 
     return view.render('tasks',{
